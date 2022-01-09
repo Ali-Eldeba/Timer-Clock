@@ -2,6 +2,8 @@
 
 ## this Website has a lot of futures for Example
 
-## 1 -you Can see  mnutes / hours you got to make something
+## 1 - You Can see  Minutes or Hours you got to make something
 
 ## 2 - You Can see the Clock 
+
+Link: https://ali-eldeba.github.io/Timer-Clock/
