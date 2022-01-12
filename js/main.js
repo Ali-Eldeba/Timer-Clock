@@ -4,7 +4,7 @@ var seconds = 0;
 var minutes = 0;
 var hours = 0;
 
-clocking = setInterval(Time, 0.2);
+clocking = setInterval(Time, 1000);
 
 function Time() {
   seconds++;
