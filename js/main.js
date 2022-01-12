@@ -1,10 +1,14 @@
 let element = document.querySelector("div h3");
+let stop = document.getElementsByClassName("stop");
+// let reset = document.getElementsByClassName("reset");
 
-let seconds = 0;
-let minutes = 0;
-let hours = 0;
+var seconds = 0;
+var minutes = 0;
+var hours = 0;
 
-setInterval(function () {
+clocking = setInterval(Time, 1000);
+
+function Time() {
   element.textContent = `${hours} : ${minutes} : ${seconds}`;
 
   seconds++;
@@ -19,4 +23,8 @@ setInterval(function () {
     seconds = 0;
     ++hours;
   }
-}, 1000);
+}
+
+function stopping() {
+  clearInterval(clocking);
+}

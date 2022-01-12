@@ -23,3 +23,18 @@ h1 {
   text-align: center;
   margin-top: 50px;
 }
+.stop {
+  width: 150px;
+  height: 50px;
+  background-color: blue;
+  color: white;
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translate(-50%);
+  border: solid blue 2px;
+  box-shadow: rgba(88, 15, 233, 0.253) 3px 3px, rgba(88, 15, 233, 0.253) 3px 4px;
+}
+.stop:hover {
+  cursor: pointer;
+}
