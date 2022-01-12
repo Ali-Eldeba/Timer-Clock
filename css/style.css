@@ -34,7 +34,26 @@ h1 {
   transform: translate(-50%);
   border: solid blue 2px;
   box-shadow: rgba(88, 15, 233, 0.253) 3px 3px, rgba(88, 15, 233, 0.253) 3px 4px;
+  z-index: 1;
 }
 .stop:hover {
   cursor: pointer;
+  background-color: rgb(19, 19, 230);
+}
+.continue {
+  width: 150px;
+  height: 50px;
+  background-color: blue;
+  color: white;
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translate(-50%);
+  border: solid blue 2px;
+  box-shadow: rgba(88, 15, 233, 0.253) 3px 3px, rgba(88, 15, 233, 0.253) 3px 4px;
+  display: none;
+}
+.continue:hover {
+  cursor: pointer;
+  background-color: rgb(19, 19, 230);
 }

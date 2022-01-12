@@ -1,30 +1,37 @@
 let element = document.querySelector("div h3");
-let stop = document.getElementsByClassName("stop");
-// let reset = document.getElementsByClassName("reset");
 
 var seconds = 0;
 var minutes = 0;
 var hours = 0;
 
-clocking = setInterval(Time, 1000);
+clocking = setInterval(Time, 0.2);
 
 function Time() {
-  element.textContent = `${hours} : ${minutes} : ${seconds}`;
-
   seconds++;
 
-  if (seconds === 60) {
-    seconds = 0;
-    ++minutes;
+  element.textContent = `${hours} : ${minutes} : ${seconds}`;
+
+  if (seconds === 59) {
+    seconds = -1;
+    minutes++;
   }
 
-  if (minutes === 59 && seconds === 59) {
+  if (minutes === 59 && seconds === 58) {
     minutes = 0;
-    seconds = 0;
-    ++hours;
+    seconds = -1;
+    hours++;
   }
 }
 
 function stopping() {
   clearInterval(clocking);
+  document.getElementById("hide").style.cssText = "display: none;";
+  document.querySelector("#con").style.cssText = "display: block;";
+}
+
+function going() {
+  clearInterval(clocking);
+  clocking = setInterval(Time, 1000);
+  document.getElementById("hide").style.cssText = "display: block;";
+  document.querySelector("#con").style.cssText = "display: none;";
 }
